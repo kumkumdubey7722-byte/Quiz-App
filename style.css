@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 600px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s ease;
+}
+
+.quiz-container:hover {
+    transform: translateY(-3px);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    color: #666;
+}
+
+#question {
+    font-size: 22px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #ddd;
+    border-radius: 8px;
+
+    background: white;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-size: 16px;
+
+    transition: all 0.2s ease;
+}
+
+.option:hover {
+    background: #f0f0f0;
+    border-color: #777;
+}
+
+.option.selected {
+    background: #e3f2fd;
+    border-color: #2196f3;
+}
+
+.option.correct {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+.option.wrong {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+#next-btn,
+#restart-btn {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #333;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+#next-btn:hover,
+#restart-btn:hover {
+    background: #555;
+}
+
+#result-box {
+    display: none;
+
+    text-align: center;
+}
+
+#result-box h2 {
+    margin-bottom: 20px;
+}
+
+#final-score {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 500px) {
+
+    .quiz-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    #question {
+        font-size: 19px;
+    }
+
+    .option {
+        font-size: 14px;
+    }
+
+}
